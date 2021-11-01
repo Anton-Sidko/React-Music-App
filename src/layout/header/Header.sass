@@ -1,0 +1,90 @@
+@import '../../index.sass';
+
+header
+    position: relative
+    width: 100vw
+    height: 40px
+    background-color: $main
+    &.menu-open
+        .toggleMnu-btn
+            span:nth-child(2)
+                display: none
+            span:first-child
+                transform: rotate(45deg) translate(0, 4px)
+            span:last-child
+                transform: rotate(-45deg) translate(0, -4px)
+        .side-menu
+            transform: translateX(0)
+
+.header-row
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: #fff
+    height: 100%
+    padding: 0 8px
+
+.user-wrap
+    display: flex
+    align-items: center
+    height: 100%
+    span
+        font-size: 14px
+        line-height: 16
+
+.user-photo-wrap
+    width: 32px
+    margin-left: 12px
+    img
+        width: 100%
+        object-fit: contain
+
+.toggleMnu-btn
+    position: relative
+    z-index: 10
+    span
+        transition: .5s
+        display: block
+        width: 20px
+        height: 2px
+        background-color: #fff
+        margin: 4px 0
+
+.side-menu
+    position: absolute
+    top: 0
+    left: 0
+    width: 89%
+    height: calc(100vh - 26px)
+    max-width: 500px
+    z-index: 5
+    transform: translateX(-100%)
+    transition: 1s
+    background-color: $bgc
+
+.side-menu-img
+    img
+        width: 100%
+        object-fit: contain
+
+.side-menu-list
+    margin-top: 40px
+    li
+        display: flex
+        align-items: center
+        padding: 16px
+        &:last-child
+            position: absolute
+            bottom: 0
+            width: 100%
+            padding: 30px 16px
+            border-top: 2px solid #0172C2
+        a
+            color: #000
+
+.icon-wrap
+    margin-right: 18px
+    width: 40px
+    img
+        width: 100%
+        object-fit: contain
