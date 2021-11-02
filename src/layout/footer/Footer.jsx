@@ -2,6 +2,10 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 import './Footer.sass';
+import {heartIcon,
+        listIcon,
+        personIcon,
+        folderIcon} from '../assets';
 
 function Footer() {
 
@@ -15,17 +19,23 @@ function Footer() {
                             className="footer-link"
                             activeClassName="active"
                         >
-                            Like
+                            <div className="footer-link-img">
+                                <img src={heartIcon} alt={heartIcon} />
+                            </div>
+                            <span>Like</span>
                         </NavLink>
                     </li>
 
                     <li>
                         <NavLink
-                            to="/chart"
+                            exact to="/"
                             className="footer-link"
                             activeClassName="active"
                         >
-                            Chart
+                            <div className="footer-link-img">
+                                <img src={listIcon} alt={listIcon} />
+                            </div>
+                            <span>Chart</span>
                         </NavLink>
                     </li>
 
@@ -35,7 +45,10 @@ function Footer() {
                             className="footer-link"
                             activeClassName="active"
                         >
-                            Artist
+                            <div className="footer-link-img">
+                                <img src={personIcon} alt={personIcon} />
+                            </div>
+                            <span>Artist</span>
                         </NavLink>
                     </li>
 
@@ -45,7 +58,10 @@ function Footer() {
                             className="footer-link"
                             activeClassName="active"
                         >
-                            Genre
+                            <div className="footer-link-img">
+                                <img src={folderIcon} alt={folderIcon} />
+                            </div>
+                            <span>Genre</span>
                         </NavLink>
                     </li>
                 </ul>

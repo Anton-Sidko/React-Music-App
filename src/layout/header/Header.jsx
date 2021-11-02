@@ -7,7 +7,7 @@ import {sideMenuBG,
         donateIcon,
         cloudIcon,
         settingsIcon,
-        userPhoto} from './assets';
+        userPhoto} from '../assets';
 
 function Header() {
     const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);

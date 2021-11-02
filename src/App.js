@@ -7,6 +7,7 @@ import Like from './layout/pages/like/Like';
 import Chart from './layout/pages/chart/Chart';
 import Artist from './layout/pages/artist/Artist';
 import Genre from './layout/pages/genre/Genre';
+import Player from './layout/pages/player/Player';
 
 function App() {
     return (
@@ -17,9 +18,10 @@ function App() {
                 <main className="content-wrap">
                     <Switch>
                         <Route path="/like" component={Like} />
-                        <Route path="/chart" component={Chart} />
+                        <Route exact path="/" component={Chart} />
                         <Route path="/artist" component={Artist} />
                         <Route path="/genre" component={Genre} />
+                        <Route path="/player" component={Player} />
                     </Switch>
                 </main>
                 <Footer />
