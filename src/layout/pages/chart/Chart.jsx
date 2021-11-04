@@ -2,11 +2,9 @@ import React, {useState, useEffect} from 'react';
 
 import {getTopTracks} from '../../../services/api';
 import Spinner from '../../spinner/Spinner';
-import ChartItem from '../../../components/chart/ChartItem';
+import List from '../../../components/chart/List';
 
-import './Chart.sass';
-
-function Chart() {
+function Chart(props) {
     const [topTrack, setTopTrack] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -23,11 +21,7 @@ function Chart() {
         <>
         {loading ? <Spinner /> : (
             topTrack.length > 0 ? (
-                <div className="chart-list">
-                    {topTrack.map(el => (
-                        <ChartItem key={el.id} {...el} />
-                    ))}
-                </div>
+                <List itemList={topTrack} {...props}></List>
             ) : (
                 <h2>Something wrong. Data was not loaded</h2>
             )

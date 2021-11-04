@@ -1,3 +1,4 @@
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import StatusBar from './layout/statusBar/StatusBar';
@@ -10,6 +11,26 @@ import Genre from './layout/pages/genre/Genre';
 import Player from './layout/pages/player/Player';
 
 function App() {
+    const [likedTrack, setLikedTrack] = useState([]);
+
+    useEffect(() => {
+        const liked = localStorage.getItem('likedTrack');
+        if (liked) {
+            setLikedTrack(liked.split(','));
+        }
+    }, [])
+
+    const handleLikedTrack = (id) => {
+        let liked = likedTrack;
+        if (likedTrack.includes(`${id}`)) {
+            liked.splice(likedTrack.indexOf(`${id}`), 1);
+        } else {
+            liked.push(id);
+        }
+        setLikedTrack(liked);
+        localStorage.setItem('likedTrack', liked.join(','));
+    };
+
     return (
         <>
             <Router basename="/MusicApp">
@@ -17,8 +38,22 @@ function App() {
                 <Header />
                 <main className="content-wrap">
                     <Switch>
-                        <Route path="/like" component={Like} />
-                        <Route exact path="/" component={Chart} />
+                        <Route
+                            path="/like"
+                            render={
+                                props => <Like {...props}
+                                        handleLikedTrack={handleLikedTrack}
+                                        likedTrack={likedTrack}
+                                />}
+                        />
+                        <Route
+                            exact path="/"
+                            render={
+                                props => <Chart {...props}
+                                        handleLikedTrack={handleLikedTrack}
+                                        likedTrack={likedTrack}
+                                />}
+                        />
                         <Route path="/artist" component={Artist} />
                         <Route path="/genre" component={Genre} />
                         <Route path="/player" component={Player} />

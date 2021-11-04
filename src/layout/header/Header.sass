@@ -15,6 +15,8 @@ header
                 transform: rotate(-45deg) translate(0, -4px)
         .side-menu
             transform: translateX(0)
+        .overlay-menu
+            display: block
 
 .header-row
     display: flex
@@ -30,7 +32,7 @@ header
     height: 100%
     span
         font-size: 14px
-        line-height: 16
+        line-height: 16px
 
 .user-photo-wrap
     width: 32px
@@ -59,7 +61,7 @@ header
     max-width: 500px
     z-index: 5
     transform: translateX(-100%)
-    transition: 1s
+    transition: 0.5s
     background-color: $bgc
 
 .side-menu-img
@@ -88,3 +90,14 @@ header
     img
         width: 100%
         object-fit: contain
+
+.overlay-menu
+    display: none
+    position: absolute
+    z-index: 1
+    width: 100%
+    height: calc(100vh - 26px)
+    top: 0
+    left: 0
+    background-color: #000
+    opacity: 0.2

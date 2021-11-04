@@ -1,0 +1,50 @@
+@import '../../index.sass';
+
+.chart-item,
+.track-info-wrap,
+.track-action
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
+.chart-item
+    margin: 15px 0
+    color: #fff
+
+.album-img
+    width: 64px
+    margin-right: 10px
+    img
+        width: 100%
+        object-fit: cover
+        border-radius: 50%
+
+.track-info-wrap
+    width: calc(100% - 74px)
+
+.track-info
+    width: 100%
+    margin-left: 0
+    margin-right: auto
+    font-size: 12px
+
+.track-action
+    margin-right: 0
+    margin-left: auto
+    a,
+    .btn-liked
+        display: block
+        width: 30px
+        img
+            width: 100%
+            object-fit: cover
+    a
+        margin: 0 5px 2px 0
+    .btn-liked
+        width: 28px
+
+.track-title
+    font-weight: 500
+    font-size: 18px
+    line-height: 24px
