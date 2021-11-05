@@ -24,7 +24,7 @@ function Like(props) {
         } else {
             setTimeout(() =>{
                 setLoading(false);
-            }, 500)
+            }, 1000)
         }
     }, [likedTrack])
 

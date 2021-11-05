@@ -9,6 +9,7 @@ import Chart from './layout/pages/chart/Chart';
 import Artist from './layout/pages/artist/Artist';
 import Genre from './layout/pages/genre/Genre';
 import Player from './layout/pages/player/Player';
+import ArtistInfo from './layout/pages/artist/ArtistInfo';
 
 function App() {
     const [likedTrack, setLikedTrack] = useState([]);
@@ -54,9 +55,22 @@ function App() {
                                         likedTrack={likedTrack}
                                 />}
                         />
-                        <Route path="/artist" component={Artist} />
+                        <Route
+                            path="/artist"
+                            render={
+                                props => <Artist {...props}
+                            />}
+                        />
                         <Route path="/genre" component={Genre} />
                         <Route path="/player" component={Player} />
+                        <Route
+                            path="/artist-info"
+                            render={
+                                props => <ArtistInfo {...props}
+                                handleLikedTrack={handleLikedTrack}
+                                likedTrack={likedTrack}
+                            />}
+                        />
                     </Switch>
                 </main>
                 <Footer />
