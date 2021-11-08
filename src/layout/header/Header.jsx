@@ -68,6 +68,7 @@ function Header() {
                             </div>
                             <a href="!#">Upload to cloud</a>
                         </li>
+                        <li>Design by<a href='https://www.behance.net/yuliavladi8e1a?tracking_source=search_projects_recommended%7Cspa' className="behance-link">Yulia Fedorova</a>.</li>
                         <li>
                             <div className="icon-wrap">
                                 <img src={settingsIcon} alt={settingsIcon} />

@@ -57,7 +57,8 @@ header
     top: 0
     left: 0
     width: 89%
-    height: calc(100vh - 26px)
+    height: 100vh
+    height: calc(var(--vh, 1vh) * 100);
     max-width: 500px
     z-index: 5
     transform: translateX(-100%)
@@ -81,7 +82,7 @@ header
             width: 100%
             padding: 30px 16px
             border-top: 2px solid #0172C2
-        a
+        a:not(.behance-link)
             color: #000
 
 .icon-wrap
@@ -101,3 +102,7 @@ header
     left: 0
     background-color: #000
     opacity: 0.2
+
+.behance-link
+    margin-left: 5px
+    color: $main
