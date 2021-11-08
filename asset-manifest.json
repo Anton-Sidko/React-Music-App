@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/React-Music-App/static/css/main.4aefaef4.chunk.css",
+    "main.js": "/React-Music-App/static/js/main.59f16792.chunk.js",
+    "main.js.map": "/React-Music-App/static/js/main.59f16792.chunk.js.map",
+    "runtime-main.js": "/React-Music-App/static/js/runtime-main.06b9f7e7.js",
+    "runtime-main.js.map": "/React-Music-App/static/js/runtime-main.06b9f7e7.js.map",
+    "static/css/2.2a9cbd7e.chunk.css": "/React-Music-App/static/css/2.2a9cbd7e.chunk.css",
+    "static/js/2.c50d3120.chunk.js": "/React-Music-App/static/js/2.c50d3120.chunk.js",
+    "static/js/2.c50d3120.chunk.js.map": "/React-Music-App/static/js/2.c50d3120.chunk.js.map",
+    "index.html": "/React-Music-App/index.html",
+    "static/css/2.2a9cbd7e.chunk.css.map": "/React-Music-App/static/css/2.2a9cbd7e.chunk.css.map",
+    "static/css/main.4aefaef4.chunk.css.map": "/React-Music-App/static/css/main.4aefaef4.chunk.css.map",
+    "static/js/2.c50d3120.chunk.js.LICENSE.txt": "/React-Music-App/static/js/2.c50d3120.chunk.js.LICENSE.txt",
+    "static/media/ArtistInfo.sass": "/React-Music-App/static/media/bg-main-page.85434516.jpeg",
+    "static/media/bluetooth-icon.19899d0c.svg": "/React-Music-App/static/media/bluetooth-icon.19899d0c.svg",
+    "static/media/cloud.a7002ebc.svg": "/React-Music-App/static/media/cloud.a7002ebc.svg",
+    "static/media/donate.afbfe3db.svg": "/React-Music-App/static/media/donate.afbfe3db.svg",
+    "static/media/edit.00fd4e51.svg": "/React-Music-App/static/media/edit.00fd4e51.svg",
+    "static/media/folder.3d375290.svg": "/React-Music-App/static/media/folder.3d375290.svg",
+    "static/media/heart-fill.455493eb.svg": "/React-Music-App/static/media/heart-fill.455493eb.svg",
+    "static/media/heart.880f0cc6.svg": "/React-Music-App/static/media/heart.880f0cc6.svg",
+    "static/media/left-arrow.2fccbf39.svg": "/React-Music-App/static/media/left-arrow.2fccbf39.svg",
+    "static/media/list.5453b9c6.svg": "/React-Music-App/static/media/list.5453b9c6.svg",
+    "static/media/person.67736900.svg": "/React-Music-App/static/media/person.67736900.svg",
+    "static/media/playIcon.3ea72f58.svg": "/React-Music-App/static/media/playIcon.3ea72f58.svg",
+    "static/media/index.css": "/React-Music-App/static/media/roboto-latin-900italic.cb5ad999.woff2",
+    "static/media/settings.aad44c08.svg": "/React-Music-App/static/media/settings.aad44c08.svg",
+    "static/media/share.7fda87ce.svg": "/React-Music-App/static/media/share.7fda87ce.svg",
+    "static/media/shareTrack.07a54f40.svg": "/React-Music-App/static/media/shareTrack.07a54f40.svg",
+    "static/media/side-menu-bg.987d77d0.png": "/React-Music-App/static/media/side-menu-bg.987d77d0.png",
+    "static/media/wifi-icon.ec120fa3.svg": "/React-Music-App/static/media/wifi-icon.ec120fa3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.06b9f7e7.js",
+    "static/css/2.2a9cbd7e.chunk.css",
+    "static/js/2.c50d3120.chunk.js",
+    "static/css/main.4aefaef4.chunk.css",
+    "static/js/main.59f16792.chunk.js"
+  ]
+}
