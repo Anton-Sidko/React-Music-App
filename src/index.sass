@@ -46,7 +46,9 @@ img
 
 .content-wrap
     flex: 1 0 auto
-    max-height: calc(100vh - 26px - 40px - 50px)
+    height: 100vh
+    height: calc(var(--vh, 1vh) * 100);
+    max-height: calc(100% - 26px - 40px - 50px)
     overflow: auto
 
 footer
