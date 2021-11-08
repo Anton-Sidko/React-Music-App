@@ -35,7 +35,7 @@ function App() {
 
     return (
         <>
-            <Router basename="/MusicApp">
+            <Router basename="/React-Music-App">
                 <StatusBar />
                 <Header />
                 <main className="content-wrap">
