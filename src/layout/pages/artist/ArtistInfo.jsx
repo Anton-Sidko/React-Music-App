@@ -4,7 +4,7 @@ import {useLocation} from 'react-router-dom';
 import {getGenresById, getArtistTopTracks} from '../../../services/api';
 import List from '../../../components/chart/List';
 import {leftArrowIcon} from '../../assets';
-// import './Player.sass';
+import './ArtistInfo.sass';
 
 function ArtistInfo(props) {
     const location = useLocation();
@@ -73,27 +73,34 @@ function ArtistInfo(props) {
                 </div>
 
                 <img src={imageURL} alt={name} />
+                <span className="artist-title">{name}</span>
             </div>
 
-            <div>{name}</div>
-            <div>{blurbs}</div>
+            {blurbs.length > 0 ? (
+                <div className="artist-blurbs">{blurbs}</div>
+                ) : null
+            }
 
             {loading ? null : (
                 artistTopTrack.length > 0 ? (
-                    <List itemList={artistTopTrack} {...props}></List>
+                    <div className="artist-top-track">
+                        <h2>Top track</h2>
+                        <List itemList={artistTopTrack} {...props}></List>
+                    </div>
                 ) : (
                     <h2>Something wrong. Data was not loaded</h2>
                 )
             )}
 
             {loading ? null : (
-                <div className="genre-list">
+                <div className="artist-genre-list">
+                    <h2>{name} genres</h2>
                     {artistGenres.map(el => (
                         <div key={el.id} className="genre">
-                            <p>{el.name}</p>
+                            <h3 className="artist-genre-title">{el.name}</h3>
                             <div
                                 dangerouslySetInnerHTML={{__html: `${el.description}`}}
-                                className="genre-descr"
+                                className="artist-genre-descr"
                             >
                             </div>
                         </div>

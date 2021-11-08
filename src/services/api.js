@@ -30,14 +30,25 @@ const getGenresById = async (id) => {
     return await response.json();
 };
 
+const getAllGenres = async () => {
+    const response = await fetch(`${API_URL}genres${API_KEY}`);
+    return await response.json();
+};
 
+const getTopTrackByGenre = async (id) => {
+    const response = await fetch(`${API_URL}genres/${id}/tracks/top${API_KEY}`);
+    return await response.json();
+};
+
+const getPlaylistByGenre = async (id) => {
+    const response = await fetch(`${API_URL}genres/${id}/playlists/top${API_KEY}`);
+    return await response.json();
+};
 
 const getLikedTrack = async (trackList) => {
     const response = await fetch(`${API_URL}tracks/${trackList}${API_KEY}`);
     return await response.json();
 };
-
-
 
 export {
     getTopTracks,
@@ -46,5 +57,8 @@ export {
     getArtistPhoto,
     getArtistInfo,
     getGenresById,
-    getArtistTopTracks
+    getArtistTopTracks,
+    getAllGenres,
+    getTopTrackByGenre,
+    getPlaylistByGenre
 };

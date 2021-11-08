@@ -10,6 +10,7 @@ import Artist from './layout/pages/artist/Artist';
 import Genre from './layout/pages/genre/Genre';
 import Player from './layout/pages/player/Player';
 import ArtistInfo from './layout/pages/artist/ArtistInfo';
+import GenreInfo from './layout/pages/genre/GenreInfo';
 
 function App() {
     const [likedTrack, setLikedTrack] = useState([]);
@@ -61,12 +62,25 @@ function App() {
                                 props => <Artist {...props}
                             />}
                         />
-                        <Route path="/genre" component={Genre} />
+                        <Route
+                            path="/genre"
+                            render={
+                                props => <Genre {...props}
+                            />}
+                        />
                         <Route path="/player" component={Player} />
                         <Route
                             path="/artist-info"
                             render={
                                 props => <ArtistInfo {...props}
+                                handleLikedTrack={handleLikedTrack}
+                                likedTrack={likedTrack}
+                            />}
+                        />
+                        <Route
+                            path="/genre-info"
+                            render={
+                                props => <GenreInfo {...props}
                                 handleLikedTrack={handleLikedTrack}
                                 likedTrack={likedTrack}
                             />}
